@@ -6,7 +6,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 function App() {
   return (
-    <div className="bg-gradient-to-tl from-[var(--superbg)] to-[var(--superbg2)] w-full min-h-screen text-white">
+    <div className="w-full min-h-screen text-white">
       <Navbar />
       <div className="container mx-auto">
         <Heropage />
