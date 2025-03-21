@@ -1,82 +1,34 @@
 [
     {
         "id": 1,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
+        "BrandImg": "bajaj.png"
     },
     {
         "id": 2,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
+        "BrandImg": "ktm.png"
     },
     {
         "id": 3,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
+        "BrandImg": "royalenfield.png"
     },
     {
         "id": 4,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
+        "BrandImg": "suzuki.png"
     },
     {
         "id": 5,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
+        "BrandImg": "yamaha.png"
     },
     {
         "id": 6,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
+        "BrandImg": "tvs.png"
     },
     {
         "id": 7,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
+        "BrandImg": "hero.png"
     },
     {
         "id": 8,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
-    },
-    {
-        "id": 9,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
-    },
-    {
-        "id": 10,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
-    },
-    {
-        "id": 11,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
-    },
-    {
-        "id": 12,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
-    },
-    {
-        "id": 13,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
-    },
-    {
-        "id": 14,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
-    },
-    {
-        "id": 15,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
-    },
-    {
-        "id": 16,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
-    },
-    {
-        "id": 17,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
-    },
-    {
-        "id": 18,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
-    },
-    {
-        "id": 19,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
-    },
-    {
-        "id": 20,
-        "BrandImg": "https://dummyimage.com/1080/1080/"
+        "BrandImg": "honda.png"
     }
 ]

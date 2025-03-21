@@ -1,18 +1,18 @@
+/* eslint-disable no-unused-vars */
 import "./App.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { BrandSlide, Cards, Heropage, Navbar } from "./index"
-
+import * as index from "./index.jsx";
 function App() {
   return (
     <div className="w-full min-h-screen text-white">
-      <Navbar />
+      <index.Navbar />
       <div className="container mx-auto">
-        <Heropage />
-        <Cards />
+        <index.Heropage />
+        <index.Cards />
       </div>
-      <BrandSlide />
+      <index.BrandSlide />
     </div>
   );
 }

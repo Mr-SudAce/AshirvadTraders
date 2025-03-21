@@ -24,8 +24,8 @@ const Navbar = memo(() => {
   }, []);
 
   return (
-    <motion.nav className="w-full bg-[var(--superbg)] fixed lg:top-10 md:top-5 top-5 shadow-md z-50 p-4">
-      <div className="flex items-center justify-between mx-auto">
+    <motion.nav className="w-full h-20 fixed bg-[var(--superbg)] lg:top-10 md:top-5 top-5 shadow-md z-50 p-4">
+      <div className="flex h-full items-center justify-between mx-auto">
         {/* Logo */}
         <div className="flex items-center">
           <LazyLoadImage
@@ -47,9 +47,8 @@ const Navbar = memo(() => {
 
         {/* Navigation Tabs */}
         <div
-          className={`lg:flex gap-10 absolute lg:static top-16 left-0 right-0 bg-[var(--superbg)] lg:bg-transparent p-4 lg:p-0 transition-all duration-300 ease-in-out ${
-            menuOpen ? "block" : "hidden"
-          } lg:flex-row flex flex-col items-center shadow-lg lg:shadow-none`}
+          className={`lg:flex gap-10 absolute lg:static top-16 left-0 right-0 bg-[var(--superbg)] lg:bg-transparent p-4 lg:p-0 transition-all duration-300 ease-in-out ${menuOpen ? "block" : "hidden"
+            } lg:flex-row flex flex-col items-center shadow-lg lg:shadow-none`}
         >
           {tabs.map(({ id, icon, name }) => (
             <div
@@ -67,9 +66,8 @@ const Navbar = memo(() => {
                 />
               )}
               <span
-                className={`relative z-10 transition-all duration-300 ${
-                  activeTab === id ? "text-[var(--superbg)]" : ""
-                }`}
+                className={`relative z-10 transition-all duration-300 ${activeTab === id ? "text-[var(--superbg)]" : ""
+                  }`}
                 title={name}
               >
                 {icon}

@@ -1,37 +1,29 @@
-import React from "react";
+/* eslint-disable no-unused-vars */
+import { motion } from "framer-motion";
 import Slider from "react-slick";
+import brandimages from "../../Brandimages.json";
+import { UseCentermodel } from "../index.jsx";
 
-const brandimages = [
-    { id: 1, BrandImg: "https://dummyimage.com/1080/000/fff" },
-    { id: 2, BrandImg: "https://dummyimage.com/1080/111/fff" },
-    { id: 3, BrandImg: "https://dummyimage.com/1080/222/fff" },
-    { id: 4, BrandImg: "https://dummyimage.com/1080/333/fff" },
-    { id: 5, BrandImg: "https://dummyimage.com/1080/444/fff" },
-];
-
-const BrandSlide = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-    };
-
+function BrandSlide() {
+    const picPath = "../src/assets/Brandimages/";
+    const { settings, SliderImages } = UseCentermodel(brandimages, picPath);
     return (
-        <>
-        <h1 className="text-black">Brands</h1>
-            <Slider {...settings} className="bg-green-400 overflow-hidden">
-                {brandimages.map((brand) => (
-                    <div key={brand.id} className="flex justify-center items-center object-cover">
-                        <img src={brand.BrandImg} alt={`Brand ${brand.id}`} className="object-contain py-4 px-3 w-20 lg:w-96 md:w-72 xl:w-96" />
-                    </div>
-                ))}
-            </Slider>
-        </>
+        <div className="w-full mx-auto overflow-hidden container px-4">
+            <motion.h2
+                className="lg:text-3xl md:text-xl text-lg text-[var(--heading1)] font-extrabold uppercase mb-3 lg:text-start md:text-start text-center decoration-white decoration-[5px] underline underline-offset-8"
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+            >
+                Brands
+            </motion.h2>
+            <div className="overflow-hidden lg:h-80 md:h-50">
+                <Slider {...settings}>
+                    {SliderImages}
+                </Slider>
+            </div>
+        </div>
     );
-};
+}
 
 export default BrandSlide;
