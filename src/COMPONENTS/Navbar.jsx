@@ -20,12 +20,12 @@ const Navbar = memo(() => {
 
   const handleTabClick = useCallback((id) => {
     setActiveTab(id);
-    setMenuOpen(false); // Close menu on selection
+    setMenuOpen(false);
   }, []);
 
   return (
-    <motion.nav className="fixed top-0 left-0 w-full bg-[var(--superbg)] shadow-md z-50 p-4">
-      <div className="flex items-center justify-between max-w-6xl mx-auto">
+    <motion.nav className="w-full bg-[var(--superbg)] fixed lg:top-10 md:top-5 top-5 shadow-md z-50 p-4">
+      <div className="flex items-center justify-between mx-auto">
         {/* Logo */}
         <div className="flex items-center">
           <LazyLoadImage
