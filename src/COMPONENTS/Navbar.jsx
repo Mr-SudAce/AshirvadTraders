@@ -117,20 +117,20 @@ const Navbar = memo(() => {
           />
         </Link>
         <button
-          className="lg:hidden text-white text-2xl"
+          className="lg:hidden text-[var(--superbg2)] text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <FaBars />
         </button>
         <div
           className={`absolute lg:static top-16 left-0 right-0 bg-[var(--superbg)] gap-10 p-4 lg:p-0 transition-all duration-300 ${menuOpen ? "block" : "hidden"
-            } lg:flex md:flex justify-between items-center`}
+            } lg:flex flex justify-between items-center`}
         >
           {tabs.map(({ id, icon, name, navurl, cities, bikes }) => (
             <div key={id} className="relative flex flex-col items-center group">
               <Link
                 to={navurl}
-                className="text-[var(--superbg2)] flex items-center px-2 py-1 transition-all"
+                className="text-[var(--superbg2)] flex flex-col items-center px-2 py-1 transition-all"
                 onClick={() => handleTabClick(id)}
               >
                 {icon}
@@ -139,7 +139,7 @@ const Navbar = memo(() => {
               {/* Dropdown Menu */}
               {(cities || bikes) && activeTab === id && (
                 <motion.div
-                  className="lg:absolute md:absolute relative lg:max-h-100 md:max-h-50 max-h-80 text-center lg:text-start md:text-start overflow-scroll no-scrollbar top-full left-0 bg-[var(--superbg)] shadow-lg rounded-md p-2 mt-1 w-48"
+                  className=" absolute lg:max-h-100 md:max-h-50 max-h-80 text-center lg:text-start md:text-start overflow-scroll no-scrollbar top-full left-0 bg-[var(--superbg)] shadow-lg rounded-md p-2 mt-1 w-48"
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.2 }}
