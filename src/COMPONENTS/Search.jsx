@@ -38,7 +38,7 @@ const Search = () => {
                             setIsOpen(true);
                         }}
                         placeholder="Search Here..."
-                        className="w-full h-full text-xl font-bold pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-300 bg-white text-black"
+                        className="w-full h-full text-lg font-bold pl-10 pr-10 py-2 border border-gray-300 outline-none transition-all duration-300 bg-white text-black"
                     />
                     {searchQuery && (
                         <button
