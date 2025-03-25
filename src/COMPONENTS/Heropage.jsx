@@ -1,6 +1,7 @@
 import React from "react";
 import bgvideo from "../assets/Img/vid.mp4";
 import Banner from "./Banner";
+import Search from "./Search";
 
 
 const Heropage = () => {
@@ -17,6 +18,8 @@ const Heropage = () => {
           muted
           playsInline
         />
+
+        <Search/>
 
       </div>
       <Banner />

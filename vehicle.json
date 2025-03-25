@@ -1,0 +1,352 @@
+[
+    {
+        "id": 1,
+        "name": "Toyota",
+        "model": "Celica",
+        "price": 550000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 2,
+        "name": "Ford",
+        "model": "Bronco",
+        "price": 770000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 3,
+        "name": "Mitsubishi",
+        "model": "Galant",
+        "price": 680000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 4,
+        "name": "Plymouth",
+        "model": "Neon",
+        "price": 380000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 5,
+        "name": "Honda",
+        "model": "Prelude",
+        "price": 400000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 6,
+        "name": "Acura",
+        "model": "TSX",
+        "price": 600000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 7,
+        "name": "Mazda",
+        "model": "RX-7",
+        "price": 230000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 8,
+        "name": "Jaguar",
+        "model": "XJ Series",
+        "price": 240000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 9,
+        "name": "Pontiac",
+        "model": "Bonneville",
+        "price": 810000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 10,
+        "name": "Mercury",
+        "model": "Sable",
+        "price": 20000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 11,
+        "name": "Dodge",
+        "model": "Ram Van B350",
+        "price": 640000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 12,
+        "name": "Mercedes-Benz",
+        "model": "E-Class",
+        "price": 920000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 13,
+        "name": "Ford",
+        "model": "Edge",
+        "price": 450000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 14,
+        "name": "Volkswagen",
+        "model": "Jetta",
+        "price": 770000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 15,
+        "name": "Chevrolet",
+        "model": "3500",
+        "price": 410000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 16,
+        "name": "Volkswagen",
+        "model": "Jetta",
+        "price": 690000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 17,
+        "name": "Volkswagen",
+        "model": "Golf III",
+        "price": 790000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 18,
+        "name": "Nissan",
+        "model": "Cube",
+        "price": 360000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 19,
+        "name": "Ford",
+        "model": "F350",
+        "price": 830000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 20,
+        "name": "Chevrolet",
+        "model": "Sportvan G10",
+        "price": 170000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 21,
+        "name": "Nissan",
+        "model": "Maxima",
+        "price": 190000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 22,
+        "name": "Lincoln",
+        "model": "Town Car",
+        "price": 580000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 23,
+        "name": "Ford",
+        "model": "Flex",
+        "price": 670000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 24,
+        "name": "Land Rover",
+        "model": "Range Rover",
+        "price": 660000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 25,
+        "name": "Land Rover",
+        "model": "Discovery",
+        "price": 120000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 26,
+        "name": "Toyota",
+        "model": "Tundra",
+        "price": 300000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 27,
+        "name": "GMC",
+        "model": "Jimmy",
+        "price": 350000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 28,
+        "name": "Mazda",
+        "model": "B-Series Plus",
+        "price": 690000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 29,
+        "name": "Honda",
+        "model": "Odyssey",
+        "price": 700000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 30,
+        "name": "Mitsubishi",
+        "model": "Eclipse",
+        "price": 910000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 31,
+        "name": "Kia",
+        "model": "Rio",
+        "price": 800000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 32,
+        "name": "Honda",
+        "model": "CR-V",
+        "price": 310000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 33,
+        "name": "Ford",
+        "model": "Fairlane",
+        "price": 630000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 34,
+        "name": "Mitsubishi",
+        "model": "Galant",
+        "price": 520000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 35,
+        "name": "Foose",
+        "model": "Hemisfear",
+        "price": 160000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 36,
+        "name": "Volkswagen",
+        "model": "Beetle",
+        "price": 840000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 37,
+        "name": "Ford",
+        "model": "Econoline E250",
+        "price": 290000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 38,
+        "name": "Pontiac",
+        "model": "Firebird",
+        "price": 690000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 39,
+        "name": "Mazda",
+        "model": "Protege",
+        "price": 140000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 40,
+        "name": "Daewoo",
+        "model": "Leganza",
+        "price": 520000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 41,
+        "name": "Volvo",
+        "model": "V70",
+        "price": 110000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 42,
+        "name": "Land Rover",
+        "model": "Freelander",
+        "price": 1000000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 43,
+        "name": "Pontiac",
+        "model": "G5",
+        "price": 430000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 44,
+        "name": "Mitsubishi",
+        "model": "3000GT",
+        "price": 910000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 45,
+        "name": "BMW",
+        "model": "3 Series",
+        "price": 30000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 46,
+        "name": "Mazda",
+        "model": "Mazda2",
+        "price": 640000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 47,
+        "name": "Mercedes-Benz",
+        "model": "M-Class",
+        "price": 820000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 48,
+        "name": "Hyundai",
+        "model": "Tiburon",
+        "price": 280000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 49,
+        "name": "Jeep",
+        "model": "Wrangler",
+        "price": 500000,
+        "image": "https://picsum.photos/1080/"
+    },
+    {
+        "id": 50,
+        "name": "Infiniti",
+        "model": "J",
+        "price": 740000,
+        "image": "https://picsum.photos/1080/"
+    }
+]

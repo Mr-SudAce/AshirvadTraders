@@ -7,3 +7,8 @@
     --heading1: #000000;
     --icon:#ffffff;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
