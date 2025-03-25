@@ -28,7 +28,7 @@ const Search = () => {
             <div className="relative shadow-amber-400" style={{
                 boxShadow: "0 0 50px 20px var(--superbg2)",
             }}>
-                <div className="relative flex items-center w-[50rem] h-15">
+                <div className="relative flex items-center max-w-[50rem] lg:w-[40rem] md:w-[40rem] w-[20rem] h-15">
                     <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
                     <input
                         type="text"

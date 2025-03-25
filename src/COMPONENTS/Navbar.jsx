@@ -1,34 +1,113 @@
+/* eslint-disable no-unused-vars */
 import { useState, useCallback, memo } from "react";
 import { FaHome, FaBars, FaCity, FaUser } from "react-icons/fa";
 import { LuBike } from "react-icons/lu";
-// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { TbBrand4Chan } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import { TbBrand4Chan } from "react-icons/tb";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
 
 const tabs = [
-  { id: 1, icon: <FaHome size={24} />, name: "Home", url: "/" },
-  { id: 2, icon: <LuBike size={24} />, name: "Bike", url: "/bike" },
-  { id: 3, icon: <FaCity size={24} />, name: "City", url: "/city" },
-  { id: 4, icon: <TbBrand4Chan size={24} />, name: "Profile", url: "/profile" },
-  { id: 5, icon: <FaUser size={24} />, name: "User", url: "/user" },
+  { id: 1, icon: <FaHome size={24} />, name: "Home", navurl: "/" },
+  {
+    id: 2, icon: <LuBike size={24} />, name: "Bike", navurl: "/bike",
+    bikes: [
+      { id: 1, name: "Mountain Bike", url: "mountain-bike" },
+      { id: 2, name: "Road Bike", url: "road-bike" },
+      { id: 3, name: "Electric Bike", url: "electric-bike" },
+      { id: 4, name: "Scooty", url: "scooty" },
+      { id: 1, name: "Mountain Bike", url: "mountain-bike" },
+      { id: 2, name: "Road Bike", url: "road-bike" },
+      { id: 3, name: "Electric Bike", url: "electric-bike" },
+      { id: 4, name: "Scooty", url: "scooty" },
+      { id: 1, name: "Mountain Bike", url: "mountain-bike" },
+      { id: 2, name: "Road Bike", url: "road-bike" },
+      { id: 3, name: "Electric Bike", url: "electric-bike" },
+      { id: 4, name: "Scooty", url: "scooty" },
+      { id: 1, name: "Mountain Bike", url: "mountain-bike" },
+      { id: 2, name: "Road Bike", url: "road-bike" },
+      { id: 3, name: "Electric Bike", url: "electric-bike" },
+      { id: 4, name: "Scooty", url: "scooty" },
+      { id: 1, name: "Mountain Bike", url: "mountain-bike" },
+      { id: 2, name: "Road Bike", url: "road-bike" },
+      { id: 3, name: "Electric Bike", url: "electric-bike" },
+      { id: 4, name: "Scooty", url: "scooty" },
+      { id: 1, name: "Mountain Bike", url: "mountain-bike" },
+      { id: 2, name: "Road Bike", url: "road-bike" },
+      { id: 3, name: "Electric Bike", url: "electric-bike" },
+      { id: 4, name: "Scooty", url: "scooty" },
+      { id: 1, name: "Mountain Bike", url: "mountain-bike" },
+      { id: 2, name: "Road Bike", url: "road-bike" },
+      { id: 3, name: "Electric Bike", url: "electric-bike" },
+      { id: 4, name: "Scooty", url: "scooty" },
+      { id: 1, name: "Mountain Bike", url: "mountain-bike" },
+      { id: 2, name: "Road Bike", url: "road-bike" },
+      { id: 3, name: "Electric Bike", url: "electric-bike" },
+      { id: 4, name: "Scooty", url: "scooty" },
+      { id: 1, name: "Mountain Bike", url: "mountain-bike" },
+      { id: 2, name: "Road Bike", url: "road-bike" },
+      { id: 3, name: "Electric Bike", url: "electric-bike" },
+      { id: 4, name: "Scooty", url: "scooty" },
+      { id: 1, name: "Mountain Bike", url: "mountain-bike" },
+      { id: 2, name: "Road Bike", url: "road-bike" },
+      { id: 3, name: "Electric Bike", url: "electric-bike" },
+      { id: 4, name: "Scooty", url: "scooty" },
+      { id: 1, name: "Mountain Bike", url: "mountain-bike" },
+      { id: 2, name: "Road Bike", url: "road-bike" },
+      { id: 3, name: "Electric Bike", url: "electric-bike" },
+      { id: 4, name: "Scooty", url: "scooty" },
+      { id: 1, name: "Mountain Bike", url: "mountain-bike" },
+      { id: 2, name: "Road Bike", url: "road-bike" },
+      { id: 3, name: "Electric Bike", url: "electric-bike" },
+      { id: 4, name: "Scooty", url: "scooty" },
+      { id: 1, name: "Mountain Bike", url: "mountain-bike" },
+      { id: 2, name: "Road Bike", url: "road-bike" },
+      { id: 3, name: "Electric Bike", url: "electric-bike" },
+      { id: 4, name: "Scooty", url: "scooty" },
+    ],
+  },
+  {
+    id: 3, icon: <FaCity size={24} />, name: "City", navurl: "/city",
+    cities: [
+      { id: 1, name: "Kathmandu", url: "kathmandu" },
+      { id: 2, name: "Pokhara", url: "pokhara" },
+      { id: 3, name: "Biratnagar", url: "biratnagar" },
+      { id: 4, name: "Birgunj", url: "birgunj" },
+      { id: 5, name: "Dharan", url: "dharan" },
+      { id: 6, name: "Janakpur", url: "janakpur" },
+      { id: 7, name: "Dhangadi", url: "dhangadi" },
+      { id: 8, name: "Butwal", url: "butwal" },
+      { id: 9, name: "Mahendranagar", url: "mahendranagar" },
+      { id: 10, name: "Hetauda", url: "hetauda" },
+
+      { id: 1, name: "Kathmandu", url: "kathmandu" },
+      { id: 2, name: "Pokhara", url: "pokhara" },
+      { id: 3, name: "Biratnagar", url: "biratnagar" },
+      { id: 4, name: "Birgunj", url: "birgunj" },
+      { id: 5, name: "Dharan", url: "dharan" },
+      { id: 6, name: "Janakpur", url: "janakpur" },
+      { id: 7, name: "Dhangadi", url: "dhangadi" },
+      { id: 8, name: "Butwal", url: "butwal" },
+      { id: 9, name: "Mahendranagar", url: "mahendranagar" },
+      { id: 10, name: "Hetauda", url: "hetauda" },
+    ],
+  },
+  { id: 4, icon: <TbBrand4Chan size={24} />, name: "Profile", navurl: "/profile" },
+  { id: 5, icon: <FaUser size={24} />, name: "User", navurl: "/user" },
 ];
 
 const Navbar = memo(() => {
-  const [activeTab, setActiveTab] = useState(1);
+  const [activeTab, setActiveTab] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleTabClick = useCallback((id) => {
-    setActiveTab(id);
-    setMenuOpen(false);
+    setActiveTab((prev) => (prev === id ? null : id));
   }, []);
 
   return (
-    <motion.nav className="w-full h-20 fixed bg-[var(--superbg)] lg:top-10 md:top-5 top-5 shadow-md z-50 p-4">
-      <div className="flex h-full items-center justify-between mx-auto">
-        <div className="flex items-center">
+    <nav className="w-full fixed bg-[var(--superbg)] lg:top-10 md:top-5 shadow-md z-50 p-4">
+      <div className="flex h-full items-center justify-between w-full">
+        <Link to="/" className="text-white text-lg font-bold">
           <LazyLoadImage
             src="https://picsum.photos/id/202/1080/720/"
             alt="logo"
@@ -36,42 +115,51 @@ const Navbar = memo(() => {
             height={50}
             width={50}
           />
-        </div>
+        </Link>
         <button
-          className="lg:hidden text-[var(--superbg2)] text-2xl"
+          className="lg:hidden text-white text-2xl"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <FaBars />
         </button>
         <div
-          className={`lg:flex gap-10 absolute lg:static top-16 left-0 right-0 bg-[var(--superbg)] lg:bg-transparent p-4 lg:p-0 transition-all duration-300 ease-in-out ${menuOpen ? "block" : "hidden"
-            } lg:flex-row flex flex-col items-center shadow-lg lg:shadow-none`}
+          className={`absolute lg:static top-16 left-0 right-0 bg-[var(--superbg)] gap-10 p-4 lg:p-0 transition-all duration-300 ${menuOpen ? "block" : "hidden"
+            } lg:flex md:flex justify-between items-center`}
         >
-          {tabs.map(({ id, icon, name, url }) => (
-            <div
-              key={id}
-              className="relative flex flex-col items-center cursor-pointer group text-[var(--superbg2)] my-2 lg:my-0"
-              onClick={() => handleTabClick(id)}
-            >
-              {activeTab === id && (
-                <motion.div
-                  layoutId="underline"
-                  className="absolute -top-4 w-14 h-14 bg-[var(--superbg2)] rounded-full shadow-lg"
-                  initial={{ scale: 0.8 }}
-                  animate={{ scale: 1 }}
-                  transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                />
-              )}
-              <Link to={url}  >
-                <span className={`relative z-10 transition-all duration-300 ${activeTab === id ? "text-[var(--superbg)]" : ""}`} title={name}>
-                  {icon}
-                </span>
+          {tabs.map(({ id, icon, name, navurl, cities, bikes }) => (
+            <div key={id} className="relative flex flex-col items-center group">
+              <Link
+                to={navurl}
+                className="text-[var(--superbg2)] flex items-center px-2 py-1 transition-all"
+                onClick={() => handleTabClick(id)}
+              >
+                {icon}
               </Link>
+
+              {/* Dropdown Menu */}
+              {(cities || bikes) && activeTab === id && (
+                <motion.div
+                  className="lg:absolute md:absolute relative lg:max-h-100 md:max-h-50 max-h-80 text-center lg:text-start md:text-start overflow-scroll no-scrollbar top-full left-0 bg-[var(--superbg)] shadow-lg rounded-md p-2 mt-1 w-48"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {(cities || bikes).map((item) => (
+                    <Link
+                      key={item.id}
+                      to={`${navurl}/${item.url}`}
+                      className="block px-4 py-2 text-[var(--superbg2)] hover:bg-[var(--superbg2)] hover:text-[var(--superbg)] rounded transition-all"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
             </div>
           ))}
         </div>
       </div>
-    </motion.nav>
+    </nav>
   );
 });
 
