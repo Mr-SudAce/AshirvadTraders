@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import { UseCard } from "../index.jsx"; // Ensure the correct import path
 import bikeAPI from "../../bikeapi.json";
 
-const Cards = () => {
+const Cards = memo(() => {
     const [motoData, setMotoData] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -16,10 +16,10 @@ const Cards = () => {
             {loading ? (
                 <p>Loading...</p>
             ) : (
-                <UseCard items={motoData} />
+                <UseCard data={motoData} title="Products" />
             )}
         </div>
     );
-};
+});
 
 export default Cards;

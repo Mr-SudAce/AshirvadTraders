@@ -18,7 +18,6 @@ function App() {
             <index.LtoRCard />
             <index.RtoLCard />
             <index.ProductDetail />
-            <index.RelatedProduct />
           </div>
           <index.Footer />
         </div>

@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import Slider from "react-slick";
 import useCenterMode from "./UseComponents/UseCentermode";
 
-const BrandSlide = () => {
+const BrandSlide = memo(() => {
     const [brandImg, setBrandImg] = useState([]);
     const [loading, setLoading] = useState(true);
 
@@ -54,6 +54,6 @@ const BrandSlide = () => {
             </div>
         </div>
     );
-};
+});
 
 export default BrandSlide;

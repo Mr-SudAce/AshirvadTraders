@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa'
 
-const Footer = () => {
+const Footer = memo(() => {
     return (
         <>
             <div className='bg-gray-950 py-8 px-6'>
@@ -37,6 +37,6 @@ const Footer = () => {
             </div>
         </>
     )
-}
+});
 
 export default Footer

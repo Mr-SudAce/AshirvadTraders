@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { memo } from 'react'
 import { FaHandshake, FaInfo, FaRegClock } from 'react-icons/fa'
 import { motion } from 'framer-motion';
 
-const UseItemDetail = ({
+const UseItemDetail = memo(({
   name,
   description,
   price,
@@ -83,7 +83,7 @@ const UseItemDetail = ({
             <h2 className='text-xl font-semibold text-gray-800 uppercase'>Overview</h2>
             <table className='w-full mt-2 border-gray-300 text-gray-800 rounded-lg shadow-sm'>
               <tbody>
-                {[ 
+                {[
                   ['Title', name],
                   ['KMs', KMdriven || 'N/A'],
                   ['Model Year', model_year || 'N/A'],
@@ -110,6 +110,6 @@ const UseItemDetail = ({
       </div>
     </>
   )
-}
+});
 
 export default UseItemDetail

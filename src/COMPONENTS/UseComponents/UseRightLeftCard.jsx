@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
+import { memo } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
 
-const UseRightLeftCard = ({ heading, description, redirectlink, imgUrl }) => {
+const UseRightLeftCard = memo(({ heading, description, redirectlink, imgUrl }) => {
     return (
         <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 items-center p-6 lg:p-12 gap-8">
             <div className="lg:block md:block hidden justify-center">
@@ -37,6 +38,6 @@ const UseRightLeftCard = ({ heading, description, redirectlink, imgUrl }) => {
             </motion.div>
         </div>
     );
-}
+});
 
 export default UseRightLeftCard;

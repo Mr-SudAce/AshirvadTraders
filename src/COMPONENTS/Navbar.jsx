@@ -105,7 +105,7 @@ const Navbar = memo(() => {
   }, []);
 
   return (
-    <nav className="w-full fixed bg-[var(--superbg)] lg:top-10 md:top-5 shadow-md z-50 p-4">
+    <nav className="w-full fixed bg-[var(--superbg)] lg:top-10 md:top-5 top-0 shadow-md z-50 p-4">
       <div className="flex h-full items-center justify-between w-full">
         <Link to="/" className="text-white text-lg font-bold">
           <LazyLoadImage
@@ -117,7 +117,7 @@ const Navbar = memo(() => {
           />
         </Link>
         <button
-          className="lg:hidden text-[var(--superbg2)] text-2xl"
+          className="lg:hidden text-[var(--superbg2)] text-2xl block"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <FaBars />
@@ -161,6 +161,8 @@ const Navbar = memo(() => {
       </div>
     </nav>
   );
-});
+}
+
+);
 
 export default Navbar;

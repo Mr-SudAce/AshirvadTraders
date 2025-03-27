@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 import { FiSearch, FiX } from "react-icons/fi";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import vehicleAPIData from "../../vehicle.json";
 
-const Search = () => {
+const Search = memo(() => {
     const [searchQuery, setSearchQuery] = useState("");
     const [isOpen, setIsOpen] = useState(false);
     const [filteredItems, setFilteredItems] = useState([]);
@@ -88,6 +88,6 @@ const Search = () => {
             </div>
         </div>
     );
-};
+});
 
 export default Search;

@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 
-const useCenterMode = (images) => {
+const useCenterMode = memo((images) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [slidesToShow, setSlidesToShow] = useState(5);
     const [centerPadding, setCenterPadding] = useState("5px");
@@ -88,5 +88,5 @@ const useCenterMode = (images) => {
 
     return { settings, SliderImages };
 }
-
+);
 export default useCenterMode;

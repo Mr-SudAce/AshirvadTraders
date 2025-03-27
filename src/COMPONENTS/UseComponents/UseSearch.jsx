@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, memo } from "react";
 
-const useSearchHandler = (dataSource, filterKey = "name") => {
+const useSearchHandler = memo((dataSource, filterKey = "name") => {
     const [searchQuery, setSearchQuery] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
     const [filteredItems, setFilteredItems] = useState([]);
@@ -8,8 +8,8 @@ const useSearchHandler = (dataSource, filterKey = "name") => {
     const searchRef = useRef(null);
 
     useEffect(() => {
-        fetch(dataSource)            
-        .then((data) => {
+        fetch(dataSource)
+            .then((data) => {
                 setItemList(data.default);
             })
             .catch((err) => console.error("Error loading data:", err));
@@ -68,6 +68,6 @@ const useSearchHandler = (dataSource, filterKey = "name") => {
         clearSearch,
         searchRef,
     };
-};
+});
 
 export default useSearchHandler;

@@ -1,34 +1,27 @@
-import React from 'react'
-import { UseRelatedItem } from '../index.jsx'
+import React, { memo, useEffect, useState } from 'react'
+import { UseCard } from '../index.jsx'
+import relatedItemAPI from "../../bikeapi.json";
 
-const RelatedProduct = ({
-    name = "Yamaha Mt-15 BS6",
-    description = "Best Bike",
-    price = "5,50,000",
-    image = "https://picsum.photos/id/252/1080/",
-    model_year = "2015",
-    mileage = "120",
-    engine_cc = "150",
-    fuel_type = "Petrol",
-    transmission = "Manual",
-    color = "Black",
-    KMdriven = "20000",
-}) => {
+
+const RelatedProduct = memo(() => {
+    const [relatedData, setMotoData] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setMotoData(relatedItemAPI);
+        setLoading(false);
+    }, []);
+
     return (
-        <UseRelatedItem
-            name={name}
-            description={description}
-            price={price}
-            image={image}
-            model_year={model_year}
-            mileage={mileage}
-            engine_cc={engine_cc}
-            fuel_type={fuel_type}
-            transmission={transmission}
-            color={color}
-            KMdriven={KMdriven}
-        />
-    )
-}
+        <div>
+            {loading ? (
+                <p>Loading...</p>
+            ) : (
+                <UseCard data={relatedData} title="Related Product" />
+
+            )}
+        </div>
+    );
+});
 
 export default RelatedProduct
