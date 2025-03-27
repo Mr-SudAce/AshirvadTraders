@@ -42,7 +42,7 @@ const UseItemDetail = ({
             transition={{ duration: 0.3 }}
           />
 
-          <div className='py-6 px-4 flex flex-col gap-4 w-full '>
+          <div className='py-6 px-4 flex flex-col lg:gap-9 md:gap-6 gap-3 w-full '>
             <h1 className='text-2xl font-bold text-gray-800'>{productTitle}</h1>
             <p className='text-gray-600 text-sm'>Posted {postdate} Days Ago | {KMdriven} KMs Driven</p>
             <p className='text-gray-700'>📍 Location: {location}</p>
@@ -79,13 +79,8 @@ const UseItemDetail = ({
           className='mt-6 grid lg:grid-cols-2 gap-6'
         >
           <div>
-            <h2 className='text-xl font-semibold text-gray-800'>Description</h2>
-            <p className='text-gray-700 mt-2 text-justify'>{description}</p>
-          </div>
-
-          <div>
-            <h2 className='text-xl font-semibold text-gray-800'>Overview</h2>
-            <table className='w-full mt-2 border border-gray-300 text-gray-800 rounded-lg shadow-sm'>
+            <h2 className='text-xl font-semibold text-gray-800 uppercase'>Overview</h2>
+            <table className='w-full mt-2 border-gray-300 text-gray-800 rounded-lg shadow-sm'>
               <tbody>
                 {[
                   ['Ad', productTitle],
@@ -103,6 +98,11 @@ const UseItemDetail = ({
               </tbody>
             </table>
           </div>
+          <div>
+            <h2 className='text-xl font-semibold text-gray-800 uppercase'>Description</h2>
+            <p className='text-gray-700 mt-2 text-justify line-clamp-5'>{description}</p>
+          </div>
+
         </motion.div>
       </div>
     </>

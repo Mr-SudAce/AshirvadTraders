@@ -18,7 +18,7 @@ const UseRightLeftCard = ({ heading, description, redirectlink, imgUrl }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="flex flex-col space-y-6 h-full items-start justify-center"
+                className="flex flex-col space-y-6 h-full items-end justify-center border-1 border-black p-2 lg:p-0 lg:border-none md:p-0 md:border-none"
             >
                 <h1 className="text-[var(--heading1)] text-3xl font-bold text-center lg:text-left">
                     {heading}
