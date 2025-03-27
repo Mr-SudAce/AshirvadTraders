@@ -1,7 +1,6 @@
-import React, { memo } from 'react'
 import { Editor } from '@tinymce/tinymce-react';
 
-const UseTinymce = memo(() => {
+const UseTinymce = () => {
     return (
         <>
             <Editor
@@ -24,6 +23,6 @@ const UseTinymce = memo(() => {
             />
         </>
     )
-});
+};
 
 export default UseTinymce

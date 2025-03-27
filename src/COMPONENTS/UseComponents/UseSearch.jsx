@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef, memo } from "react";
+import { useState, useEffect, useRef } from "react";
 
-const useSearchHandler = memo((dataSource, filterKey = "name") => {
+const useSearchHandler = (dataSource, filterKey = "name") => {
     const [searchQuery, setSearchQuery] = useState([]);
     const [isOpen, setIsOpen] = useState(false);
     const [filteredItems, setFilteredItems] = useState([]);
@@ -68,6 +68,6 @@ const useSearchHandler = memo((dataSource, filterKey = "name") => {
         clearSearch,
         searchRef,
     };
-});
+};
 
 export default useSearchHandler;

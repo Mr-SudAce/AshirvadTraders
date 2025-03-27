@@ -3,7 +3,7 @@ import React, { memo } from 'react'
 import { FaHandshake, FaInfo, FaRegClock } from 'react-icons/fa'
 import { motion } from 'framer-motion';
 
-const UseItemDetail = memo(({
+const UseItemDetail = ({
   name,
   description,
   price,
@@ -110,6 +110,6 @@ const UseItemDetail = memo(({
       </div>
     </>
   )
-});
+};
 
 export default UseItemDetail

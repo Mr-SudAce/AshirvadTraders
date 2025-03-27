@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { memo, useEffect, useState } from "react";
 import Slider from "react-slick";
-import useCenterMode from "./UseComponents/UseCentermode";
+import UseCenterMode from "../COMPONENTS/UseComponents/UseCenterMode"; // ✅ Corrected import path
 
 const BrandSlide = memo(() => {
     const [brandImg, setBrandImg] = useState([]);
@@ -16,16 +16,16 @@ const BrandSlide = memo(() => {
 
                 console.log("Brand images:", data);
 
-                // Ensure correct data structure
-                if (data && data.photos) {
-                    setBrandImg(data.photos);  // Extracting the correct array
+                // ✅ Ensuring correct API response format
+                if (data && Array.isArray(data.photos)) {
+                    setBrandImg(data.photos);
                 } else {
                     console.error("Unexpected API response format:", data);
                 }
 
-                setLoading(false);
             } catch (error) {
                 console.error("Error fetching API:", error);
+            } finally {
                 setLoading(false);
             }
         };
@@ -33,7 +33,7 @@ const BrandSlide = memo(() => {
         fetchData();
     }, []);
 
-    const { settings, SliderImages } = useCenterMode(brandImg);
+    const { settings, SliderImages } = UseCenterMode(brandImg);
 
     if (loading) {
         return <h1>Loading...</h1>;

@@ -1,4 +1,3 @@
-import React, { memo } from 'react';
 import { AiOutlineThunderbolt } from 'react-icons/ai';
 import { IoTimeOutline } from 'react-icons/io5';
 import { CiLocationOn } from 'react-icons/ci';
@@ -6,7 +5,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const placeholderImage = "https://via.placeholder.com/150";
 
-const UseCard = memo(({ data = [], title }) => {
+const UseCard = ({ data = [], title }) => {
     return (
         <>
             <h2 className="text-3xl text-[var(--heading1)] font-extrabold px-6 pt-5">{title}</h2>
@@ -80,6 +79,6 @@ const UseCard = memo(({ data = [], title }) => {
             </div>
         </>
     );
-});
+};
 
 export default UseCard;
