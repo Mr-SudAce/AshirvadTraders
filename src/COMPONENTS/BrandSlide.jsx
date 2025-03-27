@@ -13,10 +13,7 @@ const BrandSlide = memo(() => {
             try {
                 const res = await fetch("https://api.slingacademy.com/v1/sample-data/photos");
                 const data = await res.json();
-
-                console.log("Brand images:", data);
-
-                // ✅ Ensuring correct API response format
+                // console.log("Brand images:", data);
                 if (data && Array.isArray(data.photos)) {
                     setBrandImg(data.photos);
                 } else {

@@ -18,6 +18,7 @@ function App() {
             <index.LtoRCard />
             <index.RtoLCard />
             <index.ProductDetail />
+            {/* <index.AboutUs /> */}
           </div>
           <index.Footer />
         </div>

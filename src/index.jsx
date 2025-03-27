@@ -8,6 +8,7 @@ export { default as LtoRCard } from "./COMPONENTS/LtoRCard";
 export { default as RtoLCard } from "./COMPONENTS/RtoLCard";
 export { default as ProductDetail } from "./COMPONENTS/ProductDetail";
 export { default as RelatedProduct } from "./COMPONENTS/RelatedProduct";
+export { default as AboutUs } from "./COMPONENTS/AboutUs";
 // 
 // 
 // 
@@ -22,6 +23,7 @@ export { default as UseLeftRightCard } from "./COMPONENTS/UseComponents/UseLeftR
 export { default as UseRightLeftCard } from "./COMPONENTS/UseComponents/UseRightLeftCard";
 export { default as UseItemDetail } from "./COMPONENTS/UseComponents/UseItemDetail";
 export { default as UseCard } from "./COMPONENTS/UseComponents/UseCard";
+export { default as UseAboutUs } from "./COMPONENTS/UseComponents/UseAboutUs";
 
 
 
