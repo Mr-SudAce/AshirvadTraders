@@ -2,6 +2,7 @@
 import React from 'react'
 import { FaHandshake, FaInfo, FaRegClock } from 'react-icons/fa'
 import { motion } from 'framer-motion';
+import { FaLocationPin } from 'react-icons/fa6';
 
 const UseItemDetail = ({
   productTitle,
@@ -45,7 +46,7 @@ const UseItemDetail = ({
           <div className='py-6 px-4 flex flex-col lg:gap-9 md:gap-6 gap-3 w-full '>
             <h1 className='text-2xl font-bold text-gray-800'>{productTitle}</h1>
             <p className='text-gray-600 text-sm'>Posted {postdate} Days Ago | {KMdriven} KMs Driven</p>
-            <p className='text-gray-700'>📍 Location: {location}</p>
+            <p className='text-gray-700 flex items-center'><FaLocationPin/> Location: {location}</p>
             <div className='text-blue-600 font-semibold text-xl'>Price: NPR {price}</div>
             <p className='text-gray-700'>Contact: {contact}</p>
 
@@ -76,7 +77,7 @@ const UseItemDetail = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className='mt-6 grid lg:grid-cols-2 gap-6'
+          className='mt-6 grid lg:grid-cols-2 md:grid-cols-2 gap-6'
         >
           <div>
             <h2 className='text-xl font-semibold text-gray-800 uppercase'>Overview</h2>
@@ -100,7 +101,7 @@ const UseItemDetail = ({
           </div>
           <div>
             <h2 className='text-xl font-semibold text-gray-800 uppercase'>Description</h2>
-            <p className='text-gray-700 mt-2 text-justify line-clamp-5'>{description}</p>
+            <p className='text-gray-700 mt-2 text-justify line-clamp-10'>{description}</p>
           </div>
 
         </motion.div>
