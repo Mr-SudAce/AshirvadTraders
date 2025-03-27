@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function useCenterModel(images, imgPath) {
+const useCenterMode = (images, imgPath) => {  // Swap parameters
     const [activeIndex, setActiveIndex] = useState(0);
     const [slidesToShow, setSlidesToShow] = useState(5);
     const [centerPadding, setCenterPadding] = useState("5px");
@@ -71,17 +71,17 @@ function useCenterModel(images, imgPath) {
         ]
     };
 
-    const SliderImages = images.map((img, index) => (
+    const SliderImages = images?.map((img, index) => (
         <div
             key={index}
             className={`w-full h-full flex justify-center items-center transition-transform duration-300 
-                ${index === activeIndex ? "scale-101 opacity-100 p-2" : "scale-85 opacity-40"}`}
+            ${index === activeIndex ? "scale-101 opacity-100 p-2" : "scale-85 opacity-40"}`}
         >
             <img
-                src={`${imgPath}${img.BrandImg}`}
+                src={`${imgPath}${img.logo}`} // Fix: Ensure full image URL
                 alt={`Slide ${index}`}
                 className={`w-full h-24 sm:h-36 md:h-44 lg:h-52 xl:h-60 2xl:h-64 object-contain rounded-lg transition-all duration-300 
-                    ${index === activeIndex ? "scale-105 opacity-100" : "scale-90 opacity-60"}`}
+        ${index === activeIndex ? "scale-105 opacity-100" : "scale-90 opacity-60"}`}
             />
         </div>
     ));
@@ -89,4 +89,4 @@ function useCenterModel(images, imgPath) {
     return { settings, SliderImages };
 }
 
-export default useCenterModel;
+export default useCenterMode;

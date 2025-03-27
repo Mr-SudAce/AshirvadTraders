@@ -1,12 +1,54 @@
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import Slider from "react-slick";
-import brandimages from "../../Brandimages.json";
-import { UseCentermodel } from "../index.jsx";
+import useCenterMode from "./UseComponents/UseCentermode";
 
-function BrandSlide() {
-    const picPath = "../src/assets/Brandimages/";
-    const { settings, SliderImages } = UseCentermodel(brandimages, picPath);
+
+// const domain = "https://aashirwadtraders.com.np/"
+
+const BrandSlide = () => {
+    const [brandImg, setBrandImg] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const res = await fetch("https://aashirwadtraders.com.np/api/brand/getall", {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Access-Control-Allow-Origin": "*",
+                    },
+                });
+                const data = await res.json();
+                console.log("API response:", data);
+
+                if (Array.isArray(data)) {
+                    setBrandImg(data);
+                    console.log("Brand images:", data);
+                } else {
+                    console.error("Unexpected API response format:", data);
+                }
+                setLoading(false);
+            } catch (error) {
+                console.error("Error fetching API:", error);
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []);
+
+
+
+
+    const { settings, SliderImages } = useCenterMode(brandImg);
+
+    if (loading) {
+        return <h1>Loading...</h1>;
+    }
+
     return (
         <div className="w-full mx-auto overflow-hidden container px-4">
             <motion.h2
@@ -18,12 +60,10 @@ function BrandSlide() {
                 Brands
             </motion.h2>
             <div className="overflow-hidden lg:h-80 md:h-50">
-                <Slider {...settings}>
-                    {SliderImages}
-                </Slider>
+                <Slider {...settings}>{SliderImages}</Slider>
             </div>
         </div>
     );
-}
+};
 
 export default BrandSlide;

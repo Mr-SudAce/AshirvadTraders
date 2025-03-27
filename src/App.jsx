@@ -15,6 +15,9 @@ function App() {
             <index.Heropage />
             <index.Cards />
             <index.BrandSlide />
+            <index.LtoRCard />
+            <index.RtoLCard />
+            <index.ProductDetail />
           </div>
           <index.Footer />
         </div>
