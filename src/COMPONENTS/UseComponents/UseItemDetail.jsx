@@ -2,18 +2,19 @@
 import React from 'react'
 import { FaHandshake, FaInfo, FaRegClock } from 'react-icons/fa'
 import { motion } from 'framer-motion';
-import { FaLocationPin } from 'react-icons/fa6';
 
 const UseItemDetail = ({
-  productTitle,
-  postdate,
-  KMdriven,
-  location,
-  price,
-  contact,
-  imageUrl,
-  year,
+  name,
   description,
+  price,
+  image,
+  model_year,
+  mileage,
+  engine_cc,
+  fuel_type,
+  transmission,
+  color,
+  KMdriven,
 }) => {
   return (
     <>
@@ -24,7 +25,7 @@ const UseItemDetail = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Used {productTitle} for Sale
+          Used {name} for Sale
         </motion.h1>
 
         <motion.div
@@ -34,8 +35,8 @@ const UseItemDetail = ({
           transition={{ duration: 0.5 }}
         >
           <motion.img
-            src={imageUrl}
-            alt={productTitle}
+            src={image}
+            alt={name}
             className='w-full md:w-1/2 h-64 md:h-[400px] object-cover rounded-lg'
             loading='lazy'
             decoding='async'
@@ -44,11 +45,10 @@ const UseItemDetail = ({
           />
 
           <div className='py-6 px-4 flex flex-col lg:gap-9 md:gap-6 gap-3 w-full '>
-            <h1 className='text-2xl font-bold text-gray-800'>{productTitle}</h1>
-            <p className='text-gray-600 text-sm'>Posted {postdate} Days Ago | {KMdriven} KMs Driven</p>
-            <p className='text-gray-700 flex items-center'><FaLocationPin/> Location: {location}</p>
+            <h1 className='text-2xl font-bold text-gray-800'>{name}</h1>
+            <p className='text-gray-600 text-sm'>{KMdriven} KMs Driven</p>
+            <p className='text-gray-600 text-sm'>{model_year} </p>
             <div className='text-blue-600 font-semibold text-xl'>Price: NPR {price}</div>
-            <p className='text-gray-700'>Contact: {contact}</p>
 
             <div className='flex flex-wrap mt-4 gap-4'>
               <motion.button
@@ -83,13 +83,16 @@ const UseItemDetail = ({
             <h2 className='text-xl font-semibold text-gray-800 uppercase'>Overview</h2>
             <table className='w-full mt-2 border-gray-300 text-gray-800 rounded-lg shadow-sm'>
               <tbody>
-                {[
-                  ['Ad', productTitle],
-                  ['Added', postdate ? `Posted ${postdate} Days Ago` : 'N/A'],
-                  ['KMs Driven', KMdriven || 'N/A'],
-                  ['Location', location || 'N/A'],
+                {[ 
+                  ['Title', name],
+                  ['KMs', KMdriven || 'N/A'],
+                  ['Model Year', model_year || 'N/A'],
+                  ['Mileage', mileage || 'N/A'],
+                  ['CC', engine_cc || 'N/A'],
+                  ['Fuel Type', fuel_type || 'N/A'],
+                  ['Transmission', transmission || 'N/A'],
+                  ['Color', color || 'N/A'],
                   ['Price', `NPR ${price || 'N/A'}`],
-                  ['Contact', contact || 'N/A'],
                 ].map(([key, value], index) => (
                   <tr key={index} className='border-t border-gray-300'>
                     <td className='p-3 bg-gray-100 font-medium'>{key}</td>
@@ -103,11 +106,9 @@ const UseItemDetail = ({
             <h2 className='text-xl font-semibold text-gray-800 uppercase'>Description</h2>
             <p className='text-gray-700 mt-2 text-justify line-clamp-10'>{description}</p>
           </div>
-
         </motion.div>
       </div>
     </>
-
   )
 }
 

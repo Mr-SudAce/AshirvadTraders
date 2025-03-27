@@ -4,9 +4,6 @@ import { useEffect, useState } from "react";
 import Slider from "react-slick";
 import useCenterMode from "./UseComponents/UseCentermode";
 
-
-// const domain = "https://aashirwadtraders.com.np/"
-
 const BrandSlide = () => {
     const [brandImg, setBrandImg] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -14,22 +11,18 @@ const BrandSlide = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch("https://aashirwadtraders.com.np/api/brand/getall", {
-                    method: "GET",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Access-Control-Allow-Origin": "*",
-                    },
-                });
+                const res = await fetch("https://api.slingacademy.com/v1/sample-data/photos");
                 const data = await res.json();
-                console.log("API response:", data);
 
-                if (Array.isArray(data)) {
-                    setBrandImg(data);
-                    console.log("Brand images:", data);
+                console.log("Brand images:", data);
+
+                // Ensure correct data structure
+                if (data && data.photos) {
+                    setBrandImg(data.photos);  // Extracting the correct array
                 } else {
                     console.error("Unexpected API response format:", data);
                 }
+
                 setLoading(false);
             } catch (error) {
                 console.error("Error fetching API:", error);
@@ -39,9 +32,6 @@ const BrandSlide = () => {
 
         fetchData();
     }, []);
-
-
-
 
     const { settings, SliderImages } = useCenterMode(brandImg);
 

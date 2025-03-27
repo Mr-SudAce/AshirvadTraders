@@ -2,28 +2,35 @@ import React from 'react'
 import { UseItemDetail } from '../index.jsx'
 
 const ProductDetail = ({
-    productTitle = "2022 Royal Enfield Classic 350",
-    postdate = "3",
-    KMdriven = "100",
-    location = "Kathmandu",
+  // name,description,price,image,model_year,mileage,engine_cc,fuel_type,transmission,color
+
+    name = "2022 Royal Enfield Classic 350",
+    description = "kdvchsvdhskcsk ",
     price = "4,80,000",
-    contact = "9876543210",
-    imageUrl = "https://picsum.photos/id/247/1080",
-    year = "2025",
-    description = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, eaque hic! Autem, sed? Excepturi quidem cupiditate qui fugit quaerat sed amet harum, culpa nemo enim ullam hic dicta accusamus ipsa."
+    image = "https://picsum.photos/id/247/1080",
+    model_year = "2025",
+    mileage = "522",
+    engine_cc = "150",
+    fuel_type = "Petrol",
+    transmission = "Automatic",
+    color = "Black",
+    KMdriven = "100",
 }) => {
     return (
         <div className="flex justify-between items-center py-6 px-8 space-x-4 min-h-screen">
             <UseItemDetail
-                productTitle={productTitle}
-                postdate={postdate}
+                name={name}
                 KMdriven={KMdriven}
-                location={location}
                 price={price}
-                contact={contact}
-                imageUrl={imageUrl}
-                year={year}
+                image={image}
+                model_year={model_year}
                 description={description}
+                mileage = {mileage}
+                engine_cc = {engine_cc}
+                fuel_type = {fuel_type}
+                transmission={transmission}
+                color={color}
+
             />
         </div>
     )

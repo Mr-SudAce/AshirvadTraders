@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useCenterMode = (images, imgPath) => {  // Swap parameters
+const useCenterMode = (images) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [slidesToShow, setSlidesToShow] = useState(5);
     const [centerPadding, setCenterPadding] = useState("5px");
@@ -78,9 +78,9 @@ const useCenterMode = (images, imgPath) => {  // Swap parameters
             ${index === activeIndex ? "scale-101 opacity-100 p-2" : "scale-85 opacity-40"}`}
         >
             <img
-                src={`${imgPath}${img.logo}`} // Fix: Ensure full image URL
+                src={`${img.url}`} // change the image attribute according to API 
                 alt={`Slide ${index}`}
-                className={`w-full h-24 sm:h-36 md:h-44 lg:h-52 xl:h-60 2xl:h-64 object-contain rounded-lg transition-all duration-300 
+                className={`w-full h-24 md:h-44 lg:h-52 xl:h-60 2xl:h-64 object-cover rounded-lg transition-all duration-300
         ${index === activeIndex ? "scale-105 opacity-100" : "scale-90 opacity-60"}`}
             />
         </div>
